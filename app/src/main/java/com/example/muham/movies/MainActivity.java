@@ -38,7 +38,7 @@ import static com.example.muham.movies.R.string.api_pouplar_url;
 import static com.example.muham.movies.R.string.image_base_url;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String API_KEY = BuildConfig.API_KEY;
 Spinner spinner;
 GridView movieList;
 TextView networkStatus;
@@ -110,10 +110,10 @@ String Data;
             String apiKey=getResources().getString(R.string.api_key);
             if (strings[0]=="Popular")
             {
-                url =new URL(getResources().getString(R.string.api_pouplar_url)+apiKey);
+                url =new URL(getResources().getString(R.string.api_pouplar_url)+API_KEY);
             }
             else{
-                url =new URL(getResources().getString(R.string.api_topRated_url)+apiKey);
+                url =new URL(getResources().getString(R.string.api_topRated_url)+API_KEY);
             }
 
 
