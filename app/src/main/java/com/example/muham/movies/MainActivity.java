@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -39,13 +40,13 @@ import static com.example.muham.movies.R.string.image_base_url;
 public class MainActivity extends AppCompatActivity {
 
 Spinner spinner;
-ListView movieList;
+GridView movieList;
 TextView networkStatus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-movieList=(ListView)findViewById(R.id.movie_listviewe);
+movieList=(GridView) findViewById(R.id.moives_grid);
 networkStatus=(TextView)findViewById(R.id.network_status);
 spinnerr();
 
@@ -203,7 +204,7 @@ String Data;
 
             LayoutInflater layoutInflater=getLayoutInflater();
 
-            View view1 =  layoutInflater.inflate(R.layout.row_layout,null);
+            View view1 =  layoutInflater.inflate(R.layout.row_layout,viewGroup,false);
        textView=(TextView)view1.findViewById(R.id.movie_title);
             textView.setText(movies.get(i).getTitle());
 
