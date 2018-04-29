@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="api_pouplar_url">http://api.themoviedb.org/3/movie/popular?api_key=</string>
+    <string name="api_topRated_url">http://api.themoviedb.org/3/movie/top_rated?api_key=</string>
+    <string name="image_base_url">http://image.tmdb.org/t/p/w185/</string>
+    <string name="api_key"></string>
+
+    <string name="value_text_size">20sp</string>
+    <string-array name="SortBy">
+        <item>popular</item>
+        <item>Top Rated</item>
+    </string-array>
+</resources>
